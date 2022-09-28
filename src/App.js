@@ -8,7 +8,6 @@ import { UserContext } from './context/UserContext';
 import backgroundImage from './supermarket.jpeg';
 
 function App() {
-  const { user } = useContext(UserContext);
 
   return (
     <div className="App" style={{ backgroundImage: `url(${backgroundImage})` }}>
