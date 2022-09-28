@@ -6,7 +6,6 @@ import { signOut } from '../services/auth';
 
 export default function Header() {
   const [isActive, setIsActive] = useState(false);
-  // TODO -- replace this user with the user from context
   const { user, setUser } = useContext(UserContext);
 
   const handleLogout = async () => {
@@ -18,10 +17,6 @@ export default function Header() {
       console.error(e.message);
     }
   };
-
-  if (!user) {
-    return <Redirect to='/auth/sign-in' />;
-  }
 
   return (
     <nav className="navbar is-success" role="navigation" aria-label="main navigation">
