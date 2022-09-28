@@ -12,8 +12,6 @@ export default function Items() {
 
   const { user } = useContext(UserContext);
 
-  // TODO -- redirect the user back to auth if there is not a current user
-
   const handleClick = async (item) => {
     try {
       const updatedItem = await toggleListItem(item);
